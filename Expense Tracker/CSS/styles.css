@@ -1,0 +1,213 @@
+/* Body Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f1f8ff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #333;
+}
+
+/* Container */
+.container {
+    max-width: 600px;
+    margin: 20px;
+    padding: 30px;
+    background: linear-gradient(145deg, #007BFF, #6a1b9a);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    animation: fadeIn 1s ease-out;
+    color: white;
+}
+
+/* Heading */
+h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    animation: fadeInHeader 1s ease-out, shadowIn 1s ease-out;
+    color: #fff; /* White color to contrast with background */
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3); /* Adding a text shadow for subtle depth */
+}
+
+/* Heading Animation */
+@keyframes fadeInHeader {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes shadowIn {
+    0% {
+        text-shadow: 0 0 0 rgba(0, 0, 0, 0);
+    }
+    100% {
+        text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+    }
+}
+
+/* Heading for subheading */
+h2 {
+    font-size: 1.8rem;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Form Styles */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="date"] {
+    padding: 12px;
+    font-size: 1rem;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+/* Focus animation on inputs */
+input[type="text"]:focus,
+input[type="number"]:focus,
+input[type="date"]:focus {
+    border-color: #007BFF;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Submit Button */
+button {
+    padding: 12px 20px;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #039be5; /* Light blue button */
+    color: white;
+    font-family: 'Poppins', sans-serif; /* Modern font */
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s ease-in-out;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center; /* Align text and icon */
+    justify-content: center;
+    gap: 10px; /* Space between the icon and text */
+}
+
+/* Add icon inside the button */
+button i {
+    font-size: 1.2rem; /* Slightly larger icon */
+}
+
+/* Hover Effect */
+button:hover {
+    background-color: #4fc3f7; /* Slightly darker blue on hover */
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Slightly bigger shadow */
+}
+
+/* Focus Effect */
+button:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Focused glow effect */
+}
+
+/* Button Animation */
+@keyframes buttonPress {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(0.98);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Button animation when clicked */
+button:active {
+    animation: buttonPress 0.2s ease;
+}
+
+/* Adding icon before text */
+button .fa-plus {
+    margin-right: 8px; /* Space between icon and text */
+}
+
+/* Expense List */
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+/* Each expense item */
+li {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+    opacity: 0;
+    animation: fadeInListItem 0.5s forwards;
+}
+
+/* Delete button */
+button.delete {
+    background-color: #f44336;
+    border: none;
+    color: white;
+    padding: 5px 12px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button.delete:hover {
+    background-color: #d32f2f;
+    transform: scale(1.1);
+}
+
+/* Animation for fading in list items */
+@keyframes fadeInListItem {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animation for container fade-in */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Total Expense Display */
+h2 {
+    font-size: 1.8rem;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Include a better font for the body */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
